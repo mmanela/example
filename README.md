@@ -1,3 +1,23 @@
+# SCIP Indexing Example
+
+This is an example of the output for [SCIP](https://sourcegraph.com/blog/announcing-scip) indexing using [SCIP-GO](https://github.com/sourcegraph/scip-go). I forked the [go-examples](https://github.com/golang/example) repo and ran scip-go over it.
+
+## Step by step
+
+
+- Ran `scip-go` This traversed the whole project and built the binary index output file `index.scip`
+
+
+- Ran `scip snapshot` Using the [SCIP CLI](https://github.com/sourcegraph/scip) ran the snapshot funciton which generate a new version of the code (see `scip-snapshot` folder at the root) that contains all the annotations that the scip indexer produced.
+
+
+
+- Ran `scip print --json index.scip | jq  > index.json` leveraging the SCIP CLI print command to make a json version of the index. You can view this in `index.json` as the root
+
+
+
+
+------
 # Go example projects
 
 [![Go Reference](https://pkg.go.dev/badge/golang.org/x/example.svg)](https://pkg.go.dev/golang.org/x/example)
