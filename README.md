@@ -8,16 +8,20 @@ This is an example of the output for [SCIP](https://sourcegraph.com/blog/announc
 - Ran `scip-go` This traversed the whole project and built the binary index output file `index.scip`
 
 
-- Ran `scip snapshot` Using the [SCIP CLI](https://github.com/sourcegraph/scip) ran the snapshot funciton which generate a new version of the code (see `scip-snapshot` folder at the root) that contains all the annotations that the scip indexer produced.
+- Ran `scip snapshot` Using the [SCIP CLI](https://github.com/sourcegraph/scip) ran the snapshot funciton which generate a new version of the code (see [scip-snapshot](scip-snapshot) folder at the root) that contains all the annotations that the scip indexer produced.
+![image](https://github.com/mmanela/example/assets/304410/7a39e7bf-1457-4bb1-acfb-e21905bcd49d)
 
+  
 
+- Ran `scip print --json index.scip | jq  > index.json` leveraging the SCIP CLI print command to make a json version of the index. You can view this in [index.json](index.json) as the root
 
-- Ran `scip print --json index.scip | jq  > index.json` leveraging the SCIP CLI print command to make a json version of the index. You can view this in `index.json` as the root
-
+![image](https://github.com/mmanela/example/assets/304410/443b1d5c-f593-4802-be7e-9e4f95560724)
 
 
 
 ------
+
+
 # Go example projects
 
 [![Go Reference](https://pkg.go.dev/badge/golang.org/x/example.svg)](https://pkg.go.dev/golang.org/x/example)
